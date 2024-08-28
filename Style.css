@@ -107,9 +107,12 @@ button{
 }
 
 #cointener{
-    width: 100%;
+    width: 95%;
+    height: fit-content;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    margin: 0 auto;
+
 }
 .country{
     
