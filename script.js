@@ -14,9 +14,9 @@ mode.addEventListener("click", () => {
   document.body.classList.toggle(".dark-Mode");
 
   if (document.body.classList.toggle("dark-Mode")) {
-    imgIcon.src = "/imgs/sun.png";
+    imgIcon.src = "imgs/sun.png";
   } else {
-    imgIcon.src = "/imgs/moon.png";
+    imgIcon.src = "imgs/moon.png";
   }
 });
 
