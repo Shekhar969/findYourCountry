@@ -86,12 +86,14 @@ response
     })
   })
 
-  select.addEventListener('change',()=>{
 
-    // log(select.value);
-    let searchedRegion = fetch(`https://restcountries.com/v3.1/region/${Option.value}`);
+  for (const option of options) {
+    option.addEventListener("click", () => {
+      const select = option.querySelector(".text").innerText;
+      console.log(select)
 
-    searchedRegion.then(response=>{
+      let searchedRegion = fetch(`https://restcountries.com/v3.1/region/${select}`);
+      searchedRegion.then(response=>{
         return response.json();
     }).then(countryByRegion =>{
         print(countryByRegion);
@@ -100,5 +102,5 @@ response
     })
 
     search.value = ``;
-})
-
+    });
+  }
